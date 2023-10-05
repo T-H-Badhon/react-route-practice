@@ -4,6 +4,7 @@ import {
   createBrowserRouter,
   Outlet,
   RouterProvider,
+  useNavigation,
 } from "react-router-dom";
 
 import App from './App.jsx'
@@ -36,6 +37,7 @@ import Details from './components/Details/Details.jsx';
 //   }
 // ]);
 
+
 const router = createBrowserRouter([
   {
     path:'/',
@@ -67,6 +69,10 @@ const router = createBrowserRouter([
           {
             path: 'login',
             element: <h3>its login page</h3>
+          },
+          {
+            path: '*',
+            element: <h1>not Found</h1>
           }
     ]
   }
